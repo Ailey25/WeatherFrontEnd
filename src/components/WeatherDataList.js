@@ -14,7 +14,15 @@ class WatherDataList extends React.Component {
     const weatherObj = this.props.weatherDataList.map((weatherData, index) => {
       return (
         <li key={index + 1}>
-          <text>{weatherData.country}</text>
+          <div>
+            <label>{weatherData.country}</label>
+            <div>
+              <label>Temperature: {weatherData.temperature}</label>
+            </div>
+            <div>
+              <label>{weatherData.description}</label>
+            </div>
+          </div>
         </li>
       );
     });
@@ -24,7 +32,7 @@ class WatherDataList extends React.Component {
   render() {
     if (this.props.weatherDataList === undefined ||
         this.props.weatherDataList.length === 0) {
-      return (<text>No weather data</text>);
+      return (<label>No weather data</label>);
     } else {
       return (
         <ol>

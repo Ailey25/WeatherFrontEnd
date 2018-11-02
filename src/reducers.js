@@ -8,7 +8,6 @@ const initialState = {
 
 // Reducers
 function weatherDataListReducer(state = initialState, action) {
-  console.log('len: ' + state.weatherDataList.length);
   switch(action.type) {
     case ADD_WEATHERDATA_TO_LIST:
       return {
